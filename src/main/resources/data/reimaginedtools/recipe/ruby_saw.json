@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "RRR",
+    "SS "
+  ],
+  "key": {
+    "R": "reimaginedtools:ruby",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "reimaginedtools:ruby_saw",
+    "count": 1
+  }
+}
