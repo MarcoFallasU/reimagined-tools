@@ -42,5 +42,17 @@
   "item.reimaginedtools.amethyst_hoe": "Azada de amatista",
   "item.reimaginedtools.amethyst_spear": "Lanza de amatista",
   "item.reimaginedtools.amethyst_scythe": "Guadaña de amatista",
-  "item.reimaginedtools.amethyst_saw": "Sierra de amatista"
+  "item.reimaginedtools.amethyst_saw": "Sierra de amatista",
+  "item.reimaginedtools.copper_helmet": "Casco de cobre",
+  "item.reimaginedtools.copper_chestplate": "Peto de cobre",
+  "item.reimaginedtools.copper_leggings": "Pantalones de cobre",
+  "item.reimaginedtools.copper_boots": "Botas de cobre",
+  "item.reimaginedtools.lapis_helmet": "Casco de lapislázuli",
+  "item.reimaginedtools.lapis_chestplate": "Peto de lapislázuli",
+  "item.reimaginedtools.lapis_leggings": "Pantalones de lapislázuli",
+  "item.reimaginedtools.lapis_boots": "Botas de lapislázuli",
+  "item.reimaginedtools.amethyst_helmet": "Casco de amatista",
+  "item.reimaginedtools.amethyst_chestplate": "Peto de amatista",
+  "item.reimaginedtools.amethyst_leggings": "Pantalones de amatista",
+  "item.reimaginedtools.amethyst_boots": "Botas de amatista"
 }

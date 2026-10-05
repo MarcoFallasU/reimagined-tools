@@ -27,6 +27,11 @@ public final class ModTags {
     public static final TagKey<Block> INCORRECT_FOR_AMETHYST_TOOL = block("incorrect_for_amethyst_tool");
     public static final TagKey<Item> AMETHYST_TOOL_MATERIALS = item("amethyst_tool_materials");
 
+    // Reparación de armaduras
+    public static final TagKey<Item> COPPER_ARMOR_MATERIALS = item("copper_armor_materials");
+    public static final TagKey<Item> LAPIS_ARMOR_MATERIALS = item("lapis_armor_materials");
+    public static final TagKey<Item> AMETHYST_ARMOR_MATERIALS = item("amethyst_armor_materials");
+
     private static TagKey<Block> block(String name) {
         return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(ReimaginedTools.MODID, name));
     }

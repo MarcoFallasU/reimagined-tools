@@ -1,5 +1,8 @@
 {
   "values": [
-    "reimaginedtools:ruby_chestplate"
+    "reimaginedtools:ruby_chestplate",
+    "reimaginedtools:copper_chestplate",
+    "reimaginedtools:lapis_chestplate",
+    "reimaginedtools:amethyst_chestplate"
   ]
 }

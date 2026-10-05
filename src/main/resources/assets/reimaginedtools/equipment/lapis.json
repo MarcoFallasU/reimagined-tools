@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "reimaginedtools:lapis"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "reimaginedtools:lapis"
+      }
+    ]
+  }
+}

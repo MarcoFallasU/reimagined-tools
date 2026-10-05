@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "reimaginedtools:copper"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "reimaginedtools:copper"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "reimaginedtools:amethyst"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "reimaginedtools:amethyst"
+      }
+    ]
+  }
+}
