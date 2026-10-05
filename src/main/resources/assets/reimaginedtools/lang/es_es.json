@@ -12,5 +12,11 @@
   "item.reimaginedtools.ruby_helmet": "Casco de rubí",
   "item.reimaginedtools.ruby_chestplate": "Peto de rubí",
   "item.reimaginedtools.ruby_leggings": "Pantalones de rubí",
-  "item.reimaginedtools.ruby_boots": "Botas de rubí"
+  "item.reimaginedtools.ruby_boots": "Botas de rubí",
+  "ability.reimaginedtools.ignite": "Prende fuego a los enemigos %s s",
+  "ability.reimaginedtools.life_steal": "Te cura el %s%% del daño que haces",
+  "ability.reimaginedtools.effect_on_hit": "Los golpes aplican %s durante %s s",
+  "ability.reimaginedtools.effect_while_held": "Otorga %s al sostenerlo o llevarlo puesto",
+  "ability.reimaginedtools.reflect": "Devuelve el %s%% del daño recibido",
+  "ability.reimaginedtools.set_bonus": "Set completo: %s"
 }

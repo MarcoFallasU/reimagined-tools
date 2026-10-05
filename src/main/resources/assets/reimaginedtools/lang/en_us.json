@@ -12,5 +12,11 @@
   "item.reimaginedtools.ruby_helmet": "Ruby Helmet",
   "item.reimaginedtools.ruby_chestplate": "Ruby Chestplate",
   "item.reimaginedtools.ruby_leggings": "Ruby Leggings",
-  "item.reimaginedtools.ruby_boots": "Ruby Boots"
+  "item.reimaginedtools.ruby_boots": "Ruby Boots",
+  "ability.reimaginedtools.ignite": "Ignites enemies for %s s",
+  "ability.reimaginedtools.life_steal": "Heals you for %s%% of the damage dealt",
+  "ability.reimaginedtools.effect_on_hit": "Hits apply %s for %s s",
+  "ability.reimaginedtools.effect_while_held": "Grants %s while held or worn",
+  "ability.reimaginedtools.reflect": "Reflects %s%% of damage taken",
+  "ability.reimaginedtools.set_bonus": "Full set: %s"
 }
