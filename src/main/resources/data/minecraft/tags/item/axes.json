@@ -1,6 +1,12 @@
 {
   "values": [
     "reimaginedtools:ruby_axe",
-    "reimaginedtools:ruby_saw"
+    "reimaginedtools:ruby_saw",
+    "reimaginedtools:copper_axe",
+    "reimaginedtools:copper_saw",
+    "reimaginedtools:lapis_axe",
+    "reimaginedtools:lapis_saw",
+    "reimaginedtools:amethyst_axe",
+    "reimaginedtools:amethyst_saw"
   ]
 }

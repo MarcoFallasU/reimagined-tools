@@ -1,6 +1,12 @@
 {
   "values": [
     "reimaginedtools:ruby_hoe",
-    "reimaginedtools:ruby_scythe"
+    "reimaginedtools:ruby_scythe",
+    "reimaginedtools:copper_hoe",
+    "reimaginedtools:copper_scythe",
+    "reimaginedtools:lapis_hoe",
+    "reimaginedtools:lapis_scythe",
+    "reimaginedtools:amethyst_hoe",
+    "reimaginedtools:amethyst_scythe"
   ]
 }

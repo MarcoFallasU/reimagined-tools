@@ -24,6 +24,11 @@ public final class ModItems {
     public static final Map<ToolKind, RegistryObject<Item>> RUBY_TOOLS = registerToolSet("ruby", ModToolMaterials.RUBY);
     public static final Map<ArmorType, RegistryObject<Item>> RUBY_ARMOR = registerArmorSet("ruby", ModArmorMaterials.RUBY);
 
+    // ---- Minerales poco usados: solo herramientas (las recetas son custom y se añaden aparte) ----
+    public static final Map<ToolKind, RegistryObject<Item>> COPPER_TOOLS = registerToolSet("copper", ModToolMaterials.COPPER);
+    public static final Map<ToolKind, RegistryObject<Item>> LAPIS_TOOLS = registerToolSet("lapis", ModToolMaterials.LAPIS);
+    public static final Map<ToolKind, RegistryObject<Item>> AMETHYST_TOOLS = registerToolSet("amethyst", ModToolMaterials.AMETHYST);
+
     // Para un material nuevo: define su ToolMaterial/ArmorMaterial y añade aquí otras dos líneas como las de arriba.
 
     /** Registra todas las herramientas de {@link ToolKind} para un material: {@code <material>_sword}, {@code _scythe}... */

@@ -1,5 +1,8 @@
 {
   "values": [
-    "reimaginedtools:ruby_pickaxe"
+    "reimaginedtools:ruby_pickaxe",
+    "reimaginedtools:copper_pickaxe",
+    "reimaginedtools:lapis_pickaxe",
+    "reimaginedtools:amethyst_pickaxe"
   ]
 }

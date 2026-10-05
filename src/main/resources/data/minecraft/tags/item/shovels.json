@@ -1,5 +1,8 @@
 {
   "values": [
-    "reimaginedtools:ruby_shovel"
+    "reimaginedtools:ruby_shovel",
+    "reimaginedtools:copper_shovel",
+    "reimaginedtools:lapis_shovel",
+    "reimaginedtools:amethyst_shovel"
   ]
 }
