@@ -25,6 +25,8 @@ public final class ModItems {
     public static final Map<ArmorType, RegistryObject<Item>> RUBY_ARMOR = registerArmorSet("ruby", ModArmorMaterials.RUBY);
 
     // ---- Minerales poco usados: herramientas y armadura (las recetas son custom y se añaden aparte) ----
+    /** 2 lingotes de cobre + 1 redstone. Es el material con el que se craftean (y reparan) las herramientas de cobre. */
+    public static final RegistryObject<Item> CHARGED_COPPER_INGOT = register("charged_copper_ingot", Item::new);
     public static final Map<ToolKind, RegistryObject<Item>> COPPER_TOOLS = registerToolSet("copper", ModToolMaterials.COPPER);
     public static final Map<ToolKind, RegistryObject<Item>> LAPIS_TOOLS = registerToolSet("lapis", ModToolMaterials.LAPIS);
     public static final Map<ToolKind, RegistryObject<Item>> AMETHYST_TOOLS = registerToolSet("amethyst", ModToolMaterials.AMETHYST);
