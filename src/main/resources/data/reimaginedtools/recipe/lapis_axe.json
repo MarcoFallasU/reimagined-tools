@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "RR",
+    "RS",
+    " S"
+  ],
+  "key": {
+    "R": "reimaginedtools:charged_lapis",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "reimaginedtools:lapis_axe",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:experience_bottle",
+    "minecraft:experience_bottle",
+    "minecraft:experience_bottle",
+    "minecraft:experience_bottle",
+    "minecraft:lapis_lazuli",
+    "minecraft:lapis_lazuli",
+    "minecraft:lapis_lazuli",
+    "minecraft:lapis_lazuli"
+  ],
+  "result": {
+    "id": "reimaginedtools:charged_lapis",
+    "count": 1
+  }
+}

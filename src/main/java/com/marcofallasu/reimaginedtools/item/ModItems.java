@@ -1,11 +1,13 @@
 package com.marcofallasu.reimaginedtools.item;
 
 import com.marcofallasu.reimaginedtools.ReimaginedTools;
+import com.marcofallasu.reimaginedtools.block.ModBlocks;
 import com.marcofallasu.reimaginedtools.material.ModArmorMaterials;
 import com.marcofallasu.reimaginedtools.material.ModToolMaterials;
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Function;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterial;
@@ -24,11 +26,19 @@ public final class ModItems {
     public static final Map<ToolKind, RegistryObject<Item>> RUBY_TOOLS = registerToolSet("ruby", ModToolMaterials.RUBY);
     public static final Map<ArmorType, RegistryObject<Item>> RUBY_ARMOR = registerArmorSet("ruby", ModArmorMaterials.RUBY);
 
+    /** Mineral del rubí: se encuentra bajo tierra (ver ModBlocks). El rubí es lo que suelta al minarlo. */
+    public static final RegistryObject<Item> RUBY_ORE = register("ruby_ore", props -> new BlockItem(ModBlocks.RUBY_ORE.get(), props));
+    public static final RegistryObject<Item> DEEPSLATE_RUBY_ORE = register("deepslate_ruby_ore", props -> new BlockItem(ModBlocks.DEEPSLATE_RUBY_ORE.get(), props));
+
     // ---- Minerales poco usados: herramientas y armadura (las recetas son custom y se añaden aparte) ----
     /** 2 lingotes de cobre + 1 redstone. Es el material con el que se craftean (y reparan) las herramientas de cobre. */
     public static final RegistryObject<Item> CHARGED_COPPER_INGOT = register("charged_copper_ingot", Item::new);
     public static final Map<ToolKind, RegistryObject<Item>> COPPER_TOOLS = registerToolSet("copper", ModToolMaterials.COPPER);
+    /** 4 botellas de experiencia + 4 lapislázuli. Material de crafteo y reparación de las herramientas de lapislázuli. */
+    public static final RegistryObject<Item> CHARGED_LAPIS = register("charged_lapis", Item::new);
     public static final Map<ToolKind, RegistryObject<Item>> LAPIS_TOOLS = registerToolSet("lapis", ModToolMaterials.LAPIS);
+    /** 3 fragmentos de amatista + 4 brotes pequeños de amatista (que solo se obtienen con toque de seda). */
+    public static final RegistryObject<Item> CHARGED_AMETHYST = register("charged_amethyst", Item::new);
     public static final Map<ToolKind, RegistryObject<Item>> AMETHYST_TOOLS = registerToolSet("amethyst", ModToolMaterials.AMETHYST);
 
     public static final Map<ArmorType, RegistryObject<Item>> COPPER_ARMOR = registerArmorSet("copper", ModArmorMaterials.COPPER);

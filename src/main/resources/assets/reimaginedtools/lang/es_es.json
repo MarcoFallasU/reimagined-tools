@@ -55,5 +55,9 @@
   "item.reimaginedtools.amethyst_chestplate": "Peto de amatista",
   "item.reimaginedtools.amethyst_leggings": "Pantalones de amatista",
   "item.reimaginedtools.amethyst_boots": "Botas de amatista",
-  "item.reimaginedtools.charged_copper_ingot": "Lingote de cobre cargado"
+  "item.reimaginedtools.charged_copper_ingot": "Lingote de cobre cargado",
+  "item.reimaginedtools.charged_lapis": "Lapislázuli cargado",
+  "item.reimaginedtools.charged_amethyst": "Amatista cargada",
+  "block.reimaginedtools.ruby_ore": "Mena de rubí",
+  "block.reimaginedtools.deepslate_ruby_ore": "Mena de rubí de pizarra abisal"
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "RR",
+    " S",
+    " S"
+  ],
+  "key": {
+    "R": "reimaginedtools:charged_amethyst",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "reimaginedtools:amethyst_hoe",
+    "count": 1
+  }
+}

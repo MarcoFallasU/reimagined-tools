@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:amethyst_shard",
+    "minecraft:small_amethyst_bud",
+    "minecraft:small_amethyst_bud",
+    "minecraft:small_amethyst_bud",
+    "minecraft:small_amethyst_bud"
+  ],
+  "result": {
+    "id": "reimaginedtools:charged_amethyst",
+    "count": 1
+  }
+}

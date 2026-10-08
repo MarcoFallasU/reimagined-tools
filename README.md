@@ -30,12 +30,13 @@ src/main/resources/data/                     recipe, tags
 ## Añadir un nuevo tipo de herramienta (ej. "martillo")
 Añade una entrada a `ToolKind` (con su fábrica, y una clase propia si tiene comportamiento especial como `ScytheItem`). Todos los materiales registrados con `registerToolSet` lo obtendrán; solo falta su textura, modelo, lang, receta y tag.
 
-## Recetas
-- **Rubí:** receta provisional (diamante + bloque de redstone) y herramientas/armadura con la forma clásica de vanilla.
-- **Cobre:** 2 lingotes de cobre + 1 redstone (sin forma) dan 1 *lingote de cobre cargado*, que se usa para craftear y reparar las 8 herramientas de cobre. La armadura de cobre aún no tiene receta.
-- **Lapislázuli y amatista:** sin recetas todavía (serán custom).
+## Recetas y obtención
+- **Rubí:** se encuentra como **mena de rubí** (y su variante de pizarra abisal) bajo tierra, entre y=-64 y y=32, con rareza parecida al diamante. Necesita pico de hierro o mejor, y soporta fortuna y toque de seda. Las herramientas y armadura se craftean con la gema, con la forma clásica de vanilla.
+- **Cobre:** 2 lingotes de cobre + 1 redstone dan 1 *lingote de cobre cargado*.
+- **Lapislázuli:** 4 botellas de experiencia + 4 lapislázuli dan 1 *lapislázuli cargado*.
+- **Amatista:** 3 fragmentos de amatista + 4 brotes pequeños de amatista (solo se obtienen con toque de seda) dan 1 *amatista cargada*.
+- Las 8 herramientas de cobre, lapislázuli y amatista se craftean y reparan con su material cargado (mismas formas que las del rubí). Las armaduras de cobre, lapislázuli y amatista aún no tienen receta.
 
 ## Notas
 - Las texturas son marcadores de posición generados; reemplázalas con tu arte.
-- El rubí se obtiene con una receta provisional (diamante + bloque de redstone); añade un mineral y su generación cuando quieras.
 - La lanza usa los parámetros de la lanza de diamante de vanilla.
