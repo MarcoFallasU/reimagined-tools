@@ -15,14 +15,14 @@ import net.minecraft.world.item.ToolMaterial;
  * Todos los materiales registrados con {@link ModItems#registerToolSet} lo recibirán automáticamente.
  */
 public enum ToolKind {
-    SWORD("sword", (m, p) -> new Item(p.sword(m, 3.0F, -2.4F))),
-    PICKAXE("pickaxe", (m, p) -> new Item(p.pickaxe(m, 1.0F, -2.8F))),
+    SWORD("sword", (m, p) -> new AbilityItem(p.sword(m, 3.0F, -2.4F))),
+    PICKAXE("pickaxe", (m, p) -> new AbilityItem(p.pickaxe(m, 1.0F, -2.8F))),
     AXE("axe", (m, p) -> new AxeItem(m, 6.0F, -3.1F, p)),
     SHOVEL("shovel", (m, p) -> new ShovelItem(m, 1.5F, -3.0F, p)),
     HOE("hoe", (m, p) -> new HoeItem(m, -1.0F, -1.0F, p)),
     SPEAR("spear", (m, p) -> new Item(p.spear(m, 1.05F, 1.075F, 0.5F, 3.0F, 7.5F, 6.5F, 5.1F, 10.0F, 4.6F))),
     SCYTHE("scythe", (m, p) -> new ScytheItem(m, 2.0F, -2.6F, p)),
-    SAW("saw", (m, p) -> new Item(p.tool(m, net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE, 2.5F, -2.2F, 0.0F)));
+    SAW("saw", (m, p) -> new AbilityItem(p.tool(m, net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE, 2.5F, -2.2F, 0.0F)));
 
     private final String suffix;
     private final BiFunction<ToolMaterial, Item.Properties, Item> factory;

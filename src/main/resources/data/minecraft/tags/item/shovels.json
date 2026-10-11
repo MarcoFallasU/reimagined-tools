@@ -3,6 +3,10 @@
     "reimaginedtools:ruby_shovel",
     "reimaginedtools:copper_shovel",
     "reimaginedtools:lapis_shovel",
-    "reimaginedtools:amethyst_shovel"
+    "reimaginedtools:amethyst_shovel",
+    "reimaginedtools:darkness_shovel",
+    "reimaginedtools:light_shovel",
+    "reimaginedtools:electricity_shovel",
+    "reimaginedtools:music_shovel"
   ]
 }

@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
 /** Guadaña: al romper un cultivo u hojas con ella, rompe también los vecinos en un área de 3x3. */
-public class ScytheItem extends Item {
+public class ScytheItem extends AbilityItem {
     public ScytheItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties properties) {
         super(properties.tool(material, BlockTags.MINEABLE_WITH_HOE, attackDamage, attackSpeed, 0.0F));
     }

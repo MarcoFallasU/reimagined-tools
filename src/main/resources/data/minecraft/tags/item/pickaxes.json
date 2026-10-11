@@ -3,6 +3,10 @@
     "reimaginedtools:ruby_pickaxe",
     "reimaginedtools:copper_pickaxe",
     "reimaginedtools:lapis_pickaxe",
-    "reimaginedtools:amethyst_pickaxe"
+    "reimaginedtools:amethyst_pickaxe",
+    "reimaginedtools:darkness_pickaxe",
+    "reimaginedtools:light_pickaxe",
+    "reimaginedtools:electricity_pickaxe",
+    "reimaginedtools:music_pickaxe"
   ]
 }

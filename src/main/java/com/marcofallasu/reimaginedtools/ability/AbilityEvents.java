@@ -22,6 +22,8 @@ public final class AbilityEvents {
     private static final EquipmentSlot[] ARMOR = {EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
 
     public static void register() {
+        ActionLock.register();
+        AbilityTasks.register();
         LivingHurtEvent.BUS.addListener(AbilityEvents::onHurt);
         BlockEvent.BreakEvent.BUS.addListener(AbilityEvents::onBreak);
         TickEvent.PlayerTickEvent.Post.BUS.addListener(AbilityEvents::onPlayerTick);

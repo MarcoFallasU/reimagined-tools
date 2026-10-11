@@ -3,6 +3,10 @@
     "reimaginedtools:ruby_spear",
     "reimaginedtools:copper_spear",
     "reimaginedtools:lapis_spear",
-    "reimaginedtools:amethyst_spear"
+    "reimaginedtools:amethyst_spear",
+    "reimaginedtools:darkness_spear",
+    "reimaginedtools:light_spear",
+    "reimaginedtools:electricity_spear",
+    "reimaginedtools:music_spear"
   ]
 }

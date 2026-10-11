@@ -27,6 +27,16 @@ public final class ModTags {
     public static final TagKey<Block> INCORRECT_FOR_AMETHYST_TOOL = block("incorrect_for_amethyst_tool");
     public static final TagKey<Item> AMETHYST_TOOL_MATERIALS = item("amethyst_tool_materials");
 
+    // Oscuridad, luz, electricidad y música
+    public static final TagKey<Block> INCORRECT_FOR_DARKNESS_TOOL = block("incorrect_for_darkness_tool");
+    public static final TagKey<Item> DARKNESS_TOOL_MATERIALS = item("darkness_tool_materials");
+    public static final TagKey<Block> INCORRECT_FOR_LIGHT_TOOL = block("incorrect_for_light_tool");
+    public static final TagKey<Item> LIGHT_TOOL_MATERIALS = item("light_tool_materials");
+    public static final TagKey<Block> INCORRECT_FOR_ELECTRICITY_TOOL = block("incorrect_for_electricity_tool");
+    public static final TagKey<Item> ELECTRICITY_TOOL_MATERIALS = item("electricity_tool_materials");
+    public static final TagKey<Block> INCORRECT_FOR_MUSIC_TOOL = block("incorrect_for_music_tool");
+    public static final TagKey<Item> MUSIC_TOOL_MATERIALS = item("music_tool_materials");
+
     // Reparación de armaduras
     public static final TagKey<Item> COPPER_ARMOR_MATERIALS = item("copper_armor_materials");
     public static final TagKey<Item> LAPIS_ARMOR_MATERIALS = item("lapis_armor_materials");

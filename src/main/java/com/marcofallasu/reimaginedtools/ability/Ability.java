@@ -3,6 +3,8 @@ package com.marcofallasu.reimaginedtools.ability;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,6 +19,12 @@ import net.minecraft.world.level.block.state.BlockState;
 public interface Ability {
     /** Texto que aparece en la descripción (tooltip) del ítem. */
     Component description();
+
+    /** Si es true, el ítem reacciona al clic derecho con {@link #onUse}. */
+    default boolean isActive() { return false; }
+
+    /** Clic derecho con el ítem. Debe poner su propio enfriamiento. Devuelve SUCCESS si se activó, FAIL si no pudo. */
+    default InteractionResult onUse(ServerPlayer player, ItemStack stack, InteractionHand hand) { return InteractionResult.PASS; }
 
     /** El portador golpea cuerpo a cuerpo a {@code target} con el ítem en la mano principal. */
     default void onHit(LivingEntity attacker, LivingEntity target, ItemStack stack, float damage) {}

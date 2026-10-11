@@ -7,6 +7,14 @@
     "reimaginedtools:lapis_hoe",
     "reimaginedtools:lapis_scythe",
     "reimaginedtools:amethyst_hoe",
-    "reimaginedtools:amethyst_scythe"
+    "reimaginedtools:amethyst_scythe",
+    "reimaginedtools:darkness_hoe",
+    "reimaginedtools:darkness_scythe",
+    "reimaginedtools:light_hoe",
+    "reimaginedtools:light_scythe",
+    "reimaginedtools:electricity_hoe",
+    "reimaginedtools:electricity_scythe",
+    "reimaginedtools:music_hoe",
+    "reimaginedtools:music_scythe"
   ]
 }

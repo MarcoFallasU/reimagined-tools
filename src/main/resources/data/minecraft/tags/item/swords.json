@@ -3,6 +3,10 @@
     "reimaginedtools:ruby_sword",
     "reimaginedtools:copper_sword",
     "reimaginedtools:lapis_sword",
-    "reimaginedtools:amethyst_sword"
+    "reimaginedtools:amethyst_sword",
+    "reimaginedtools:darkness_sword",
+    "reimaginedtools:light_sword",
+    "reimaginedtools:electricity_sword",
+    "reimaginedtools:music_sword"
   ]
 }

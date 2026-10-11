@@ -7,6 +7,7 @@ import com.marcofallasu.reimaginedtools.material.ModToolMaterials;
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
@@ -45,13 +46,29 @@ public final class ModItems {
     public static final Map<ArmorType, RegistryObject<Item>> LAPIS_ARMOR = registerArmorSet("lapis", ModArmorMaterials.LAPIS);
     public static final Map<ArmorType, RegistryObject<Item>> AMETHYST_ARMOR = registerArmorSet("amethyst", ModArmorMaterials.AMETHYST);
 
+    // ---- Materiales conceptuales: oscuridad, luz, electricidad y música (solo herramientas; recetas pendientes) ----
+    public static final RegistryObject<Item> DARKNESS_ESSENCE = register("darkness_essence", Item::new);
+    public static final RegistryObject<Item> LIGHT_CRYSTAL = register("light_crystal", Item::new);
+    public static final RegistryObject<Item> STORM_CORE = register("storm_core", Item::new);
+    public static final RegistryObject<Item> RESONANT_NOTE = register("resonant_note", Item::new);
+    // Como la netherite, las herramientas de oscuridad resisten el fuego y la lava.
+    public static final Map<ToolKind, RegistryObject<Item>> DARKNESS_TOOLS = registerToolSet("darkness", ModToolMaterials.DARKNESS, Item.Properties::fireResistant);
+    public static final Map<ToolKind, RegistryObject<Item>> LIGHT_TOOLS = registerToolSet("light", ModToolMaterials.LIGHT);
+    public static final Map<ToolKind, RegistryObject<Item>> ELECTRICITY_TOOLS = registerToolSet("electricity", ModToolMaterials.ELECTRICITY);
+    public static final Map<ToolKind, RegistryObject<Item>> MUSIC_TOOLS = registerToolSet("music", ModToolMaterials.MUSIC);
+
     // Para un material nuevo: define su ToolMaterial/ArmorMaterial y añade aquí otras dos líneas como las de arriba.
 
     /** Registra todas las herramientas de {@link ToolKind} para un material: {@code <material>_sword}, {@code _scythe}... */
     public static Map<ToolKind, RegistryObject<Item>> registerToolSet(String material, ToolMaterial toolMaterial) {
+        return registerToolSet(material, toolMaterial, UnaryOperator.identity());
+    }
+
+    /** Igual que el anterior, pero permite ajustar las propiedades de todos los ítems del set (por ejemplo, fireResistant). */
+    public static Map<ToolKind, RegistryObject<Item>> registerToolSet(String material, ToolMaterial toolMaterial, UnaryOperator<Item.Properties> extra) {
         Map<ToolKind, RegistryObject<Item>> set = new EnumMap<>(ToolKind.class);
         for (ToolKind kind : ToolKind.values()) {
-            set.put(kind, register(material + "_" + kind.suffix(), props -> kind.create(toolMaterial, props)));
+            set.put(kind, register(material + "_" + kind.suffix(), props -> kind.create(toolMaterial, extra.apply(props))));
         }
         return set;
     }
