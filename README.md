@@ -46,8 +46,13 @@ Cada uno tiene su ítem base (esencia de oscuridad, cristal de luz, núcleo de t
 
 Las habilidades de clic derecho funcionan en la espada, el pico, la guadaña y la sierra (clase `AbilityItem`); el hacha, la pala, la azada y la lanza ya usan el clic derecho en vanilla. Para darle una a otro ítem, `Abilities.attach(...)` en `ModAbilities`.
 
-## Casco de oscuridad (modelo 3D propio)
-El casco de oscuridad tiene los stats de la armadura de netherite y un modelo 3D hecho en Blockbench. Como no lleva "asset" de equipo, Minecraft no usa la capa de armadura y dibuja el modelo del ítem sobre la cabeza, igual que una calabaza. El modelo está en `assets/reimaginedtools/models/item/darkness_helmet.json` (convertido desde el `.bbmodel`) y su textura en `textures/item/darkness_helmet.png`. Para cambiar el diseño se edita el `.bbmodel` y se vuelve a exportar; `display.head.scale` (1.6) ajusta el tamaño sobre la cabeza.
+## Armadura de oscuridad (modelos 3D propios)
+Casco, peto, pantalones y botas con los stats de la armadura de netherite (resistente al fuego) y modelos 3D hechos en Blockbench. No usan la capa de armadura de vanilla: las dibuja `client/ModelArmorLayer`, que coloca el modelo del ítem sobre cada parte del cuerpo (cabeza, torso, brazos, piernas), de modo que se mueve y gira con ella. Funciona en jugadores y armor stands (también pequeños).
+
+- **Modelos:** `assets/reimaginedtools/models/item/darkness_<pieza>_<hueso>.json`, con coordenadas relativas al pivote de cada hueso (se generan desde el `.bbmodel`), más un modelo compuesto por pieza para el icono. La textura compartida es `textures/item/darkness_armor.png`.
+- **Cómo elige el ítem el modelo:** `assets/.../items/darkness_<pieza>.json` usa el dato personalizado ("head", "body", "right_arm", "left_arm", "right_leg", "left_leg") que pone la capa. El resto de ítems del mod no cambia.
+- **Asset de equipo vacío:** `assets/.../equipment/darkness.json` solo define una capa de caballo que nunca se usa. Sirve para que el juego entregue la pieza a nuestra capa sin dibujar nada con la de vanilla.
+- **Pendiente:** solo está registrada para jugadores y armor stands; zombis, esqueletos u otros mobs que la lleven no la dibujan.
 
 ## Notas
 - Las texturas son marcadores de posición generados; reemplázalas con tu arte.

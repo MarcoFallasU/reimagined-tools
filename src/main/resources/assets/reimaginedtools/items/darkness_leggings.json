@@ -1,0 +1,27 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "cases": [
+      {
+        "when": "right_leg",
+        "model": {
+          "type": "minecraft:model",
+          "model": "reimaginedtools:item/darkness_leggings_right_leg"
+        }
+      },
+      {
+        "when": "left_leg",
+        "model": {
+          "type": "minecraft:model",
+          "model": "reimaginedtools:item/darkness_leggings_left_leg"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "reimaginedtools:item/darkness_leggings"
+    }
+  }
+}

@@ -8,14 +8,11 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.minecraft.world.item.equipment.Equippable;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -57,13 +54,15 @@ public final class ModItems {
     // Como la netherite, las herramientas de oscuridad resisten el fuego y la lava.
     public static final Map<ToolKind, RegistryObject<Item>> DARKNESS_TOOLS = registerToolSet("darkness", ModToolMaterials.DARKNESS, Item.Properties::fireResistant);
     /**
-     * Casco de oscuridad: stats de la armadura de netherite. No lleva "asset" de equipo, así que el juego no usa la capa
-     * de armadura y dibuja el modelo 3D del ítem (assets/.../models/item/darkness_helmet.json) sobre la cabeza.
+     * Casco, peto, pantalones y botas de oscuridad: stats de la armadura de netherite y modelos 3D propios que dibuja
+     * ModelArmorLayer (ver ModelArmorItem). Su asset de equipo (equipment/darkness.json) no tiene capas de humanoide,
+     * así que la capa de armadura de vanilla no dibuja nada y solo la nuestra las coloca sobre el cuerpo.
      */
-    public static final RegistryObject<Item> DARKNESS_HELMET = register("darkness_helmet", props -> new Item(
-        props.humanoidArmor(ModArmorMaterials.DARKNESS, ArmorType.HELMET)
-            .fireResistant()
-            .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.HEAD).setEquipSound(ModArmorMaterials.DARKNESS.equipSound()).build())));
+    public static final RegistryObject<Item> DARKNESS_HELMET = registerModelArmor("darkness_helmet", ArmorType.HELMET);
+    /** Peto, pantalones y botas de oscuridad: modelos 3D propios que dibuja ModelArmorLayer (ver ModelArmorItem). */
+    public static final RegistryObject<Item> DARKNESS_CHESTPLATE = registerModelArmor("darkness_chestplate", ArmorType.CHESTPLATE);
+    public static final RegistryObject<Item> DARKNESS_LEGGINGS = registerModelArmor("darkness_leggings", ArmorType.LEGGINGS);
+    public static final RegistryObject<Item> DARKNESS_BOOTS = registerModelArmor("darkness_boots", ArmorType.BOOTS);
     public static final Map<ToolKind, RegistryObject<Item>> LIGHT_TOOLS = registerToolSet("light", ModToolMaterials.LIGHT);
     public static final Map<ToolKind, RegistryObject<Item>> ELECTRICITY_TOOLS = registerToolSet("electricity", ModToolMaterials.ELECTRICITY);
     public static final Map<ToolKind, RegistryObject<Item>> MUSIC_TOOLS = registerToolSet("music", ModToolMaterials.MUSIC);
@@ -91,6 +90,10 @@ public final class ModItems {
             set.put(type, register(material + "_" + type.getName(), props -> new Item(props.humanoidArmor(armorMaterial, type))));
         }
         return set;
+    }
+
+    private static RegistryObject<Item> registerModelArmor(String name, ArmorType type) {
+        return register(name, props -> new ModelArmorItem(props.humanoidArmor(ModArmorMaterials.DARKNESS, type).fireResistant()));
     }
 
     private static RegistryObject<Item> register(String name, Function<Item.Properties, Item> factory) {

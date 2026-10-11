@@ -20,6 +20,9 @@ public final class ReimaginedTools {
         ModCreativeTabs.TABS.register(modBusGroup);
 
         ModAbilities.register();
+        if (net.minecraftforge.fml.loading.FMLEnvironment.dist.isClient()) {
+            com.marcofallasu.reimaginedtools.client.ClientSetup.register();
+        }
         AbilityEvents.register();
     }
 }

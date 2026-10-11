@@ -1,0 +1,147 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "0": "reimaginedtools:item/darkness_armor",
+    "particle": "reimaginedtools:item/darkness_armor"
+  },
+  "elements": [
+    {
+      "name": "Muslera derecha",
+      "from": [
+        6,
+        1,
+        5.5
+      ],
+      "to": [
+        11,
+        8,
+        10.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            12.125,
+            0.625,
+            12.75,
+            1.5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            11.5,
+            0.625,
+            12.125,
+            1.5
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            13.375,
+            0.625,
+            14.0,
+            1.5
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12.75,
+            0.625,
+            13.375,
+            1.5
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12.75,
+            0.625,
+            12.125,
+            0.0
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            13.375,
+            0.0,
+            12.75,
+            0.625
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "Rodillera derecha",
+      "from": [
+        6.5,
+        1,
+        5
+      ],
+      "to": [
+        10.5,
+        4,
+        6
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.875,
+            8.625,
+            9.375,
+            9.0
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            8.75,
+            8.625,
+            8.875,
+            9.0
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            9.5,
+            8.625,
+            10.0,
+            9.0
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            9.375,
+            8.625,
+            9.5,
+            9.0
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            9.375,
+            8.625,
+            8.875,
+            8.5
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            9.875,
+            8.5,
+            9.375,
+            8.625
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "0": "reimaginedtools:item/darkness_helmet",
-    "particle": "reimaginedtools:item/darkness_helmet"
+    "0": "reimaginedtools:item/darkness_armor",
+    "particle": "reimaginedtools:item/darkness_armor"
   },
   "elements": [
     {
@@ -626,12 +626,12 @@
     {
       "name": "Manto izquierdo",
       "from": [
-        2.9000000000000004,
+        2.9,
         3,
         5
       ],
       "to": [
-        2.9000000000000004,
+        2.9,
         12,
         13
       ],
@@ -658,13 +658,6 @@
     }
   ],
   "display": {
-    "head": {
-      "scale": [
-        1.6,
-        1.6,
-        1.6
-      ]
-    },
     "gui": {
       "rotation": [
         30,
