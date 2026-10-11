@@ -103,5 +103,6 @@
   "message.reimaginedtools.teleport.no_space": "There is no room to stand there",
   "message.reimaginedtools.dash.no_space": "There is no room to dash",
   "message.reimaginedtools.bond.linked": "Resonance: %s player(s) linked",
-  "message.reimaginedtools.bond.done": "Resonance complete: %s player(s) empowered"
+  "message.reimaginedtools.bond.done": "Resonance complete: %s player(s) empowered",
+  "item.reimaginedtools.darkness_helmet": "Darkness Helmet"
 }

@@ -103,5 +103,6 @@
   "message.reimaginedtools.teleport.no_space": "No hay espacio para aparecer ahí",
   "message.reimaginedtools.dash.no_space": "No hay espacio para hacer el dash",
   "message.reimaginedtools.bond.linked": "Resonancia: %s jugador(es) unidos",
-  "message.reimaginedtools.bond.done": "Resonancia completa: %s jugador(es) potenciados"
+  "message.reimaginedtools.bond.done": "Resonancia completa: %s jugador(es) potenciados",
+  "item.reimaginedtools.darkness_helmet": "Casco de oscuridad"
 }

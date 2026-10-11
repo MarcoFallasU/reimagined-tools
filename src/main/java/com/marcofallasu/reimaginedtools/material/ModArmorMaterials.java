@@ -52,4 +52,10 @@ public final class ModArmorMaterials {
         9,
         Map.of(ArmorType.BOOTS, 2, ArmorType.LEGGINGS, 5, ArmorType.CHESTPLATE, 6, ArmorType.HELMET, 2, ArmorType.BODY, 9),
         22, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, ModTags.AMETHYST_ARMOR_MATERIALS, asset("amethyst"));
+
+    /** Oscuridad: idéntica a la armadura de netherite. */
+    public static final ArmorMaterial DARKNESS = new ArmorMaterial(
+        37,
+        Map.of(ArmorType.BOOTS, 3, ArmorType.LEGGINGS, 6, ArmorType.CHESTPLATE, 8, ArmorType.HELMET, 3, ArmorType.BODY, 11),
+        15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ModTags.DARKNESS_ARMOR_MATERIALS, asset("darkness"));
 }
