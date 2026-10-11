@@ -38,6 +38,7 @@ public final class ModTags {
     public static final TagKey<Item> MUSIC_TOOL_MATERIALS = item("music_tool_materials");
 
     // Reparación de armaduras
+    public static final TagKey<Item> LIGHT_ARMOR_MATERIALS = item("light_armor_materials");
     public static final TagKey<Item> DARKNESS_ARMOR_MATERIALS = item("darkness_armor_materials");
     public static final TagKey<Item> COPPER_ARMOR_MATERIALS = item("copper_armor_materials");
     public static final TagKey<Item> LAPIS_ARMOR_MATERIALS = item("lapis_armor_materials");

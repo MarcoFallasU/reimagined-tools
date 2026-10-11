@@ -58,4 +58,10 @@ public final class ModArmorMaterials {
         37,
         Map.of(ArmorType.BOOTS, 3, ArmorType.LEGGINGS, 6, ArmorType.CHESTPLATE, 8, ArmorType.HELMET, 3, ArmorType.BODY, 11),
         15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ModTags.DARKNESS_ARMOR_MATERIALS, asset("darkness"));
+
+    /** Luz: como la armadura de diamante, pero con mucha más encantabilidad. */
+    public static final ArmorMaterial LIGHT = new ArmorMaterial(
+        33,
+        Map.of(ArmorType.BOOTS, 3, ArmorType.LEGGINGS, 6, ArmorType.CHESTPLATE, 8, ArmorType.HELMET, 3, ArmorType.BODY, 11),
+        25, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, ModTags.LIGHT_ARMOR_MATERIALS, asset("light"));
 }

@@ -46,12 +46,22 @@ Cada uno tiene su ítem base (esencia de oscuridad, cristal de luz, núcleo de t
 
 Las habilidades de clic derecho funcionan en la espada, el pico, la guadaña y la sierra (clase `AbilityItem`); el hacha, la pala, la azada y la lanza ya usan el clic derecho en vanilla. Para darle una a otro ítem, `Abilities.attach(...)` en `ModAbilities`.
 
-## Armadura de oscuridad (modelos 3D propios)
-Casco, peto, pantalones y botas con los stats de la armadura de netherite (resistente al fuego) y modelos 3D hechos en Blockbench. No usan la capa de armadura de vanilla: las dibuja `client/ModelArmorLayer`, que coloca el modelo del ítem sobre cada parte del cuerpo (cabeza, torso, brazos, piernas), de modo que se mueve y gira con ella. Funciona en jugadores y armor stands (también pequeños).
+## Armaduras con modelo 3D propio (oscuridad y luz)
+Casco, peto, pantalones y botas con modelos 3D hechos en Blockbench. No usan la capa de armadura de vanilla: las dibuja `client/ModelArmorLayer`, que coloca el modelo del ítem sobre cada parte del cuerpo (cabeza, torso, brazos, piernas), de modo que se mueve y gira con ella. Funciona en jugadores y armor stands (también pequeños).
 
-- **Modelos:** `assets/reimaginedtools/models/item/darkness_<pieza>_<hueso>.json`, con coordenadas relativas al pivote de cada hueso (se generan desde el `.bbmodel`), más un modelo compuesto por pieza para el icono. La textura compartida es `textures/item/darkness_armor.png`.
-- **Cómo elige el ítem el modelo:** `assets/.../items/darkness_<pieza>.json` usa el dato personalizado ("head", "body", "right_arm", "left_arm", "right_leg", "left_leg") que pone la capa. El resto de ítems del mod no cambia.
-- **Asset de equipo vacío:** `assets/.../equipment/darkness.json` solo define una capa de caballo que nunca se usa. Sirve para que el juego entregue la pieza a nuestra capa sin dibujar nada con la de vanilla.
+| Set | Stats | Ítems |
+|---|---|---|
+| Oscuridad | idénticos a la netherite (resistente al fuego) | `darkness_helmet`, `_chestplate`, `_leggings`, `_boots` |
+| Luz | como el diamante, con encantabilidad 25 | `light_helmet`, `_chestplate`, `_leggings`, `_boots` |
+
+### Añadir otra armadura desde Blockbench
+1. Haz el modelo con el plugin de GeckoLib (formato "Armor"): grupos `bipedHead`/`armorHead`, `bipedBody`/`armorBody`, `bipedRightArm`/`armorRightArm`, `bipedLeftArm`/`armorLeftArm`, `bipedRightLeg`/`armorRightLeg`, `bipedLeftLeg`/`armorLeftLeg` y `armorRightBoot`/`armorLeftBoot` (dentro de la pierna). Se admiten subgrupos y cubos rotados. Los cubos con `export: false` se omiten.
+2. Ejecuta `python3 tools/bbmodel_to_armor.py --bbmodel Mi_Armadura.bbmodel --name nombre`. Genera la textura, un modelo por hueso, el modelo del icono, los `items/*.json` y `equipment/<nombre>.json`.
+3. A mano: un `ArmorMaterial` y un tag de reparación (`ModArmorMaterials`, `ModTags`), los cuatro `registerModelArmor(...)` en `ModItems`, los textos (lang) y añadirlos a los tags `minecraft:head_armor`, `chest_armor`, `leg_armor` y `foot_armor`.
+
+### Cómo funciona
+- Cada ítem elige su modelo con el dato personalizado ("head", "body", "right_arm", "left_arm", "right_leg", "left_leg") que pone la capa. Cada modelo tiene coordenadas relativas al pivote de su hueso.
+- `equipment/<nombre>.json` solo define una capa de caballo que nunca se usa: hace que el juego entregue la pieza a nuestra capa sin dibujar nada con la de vanilla.
 - **Pendiente:** solo está registrada para jugadores y armor stands; zombis, esqueletos u otros mobs que la lleven no la dibujan.
 
 ## Notas

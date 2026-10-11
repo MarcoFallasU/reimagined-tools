@@ -22,14 +22,14 @@ public final class ClientSetup {
         if (stand != null) {
             stand.addLayer(new ModelArmorLayer<>(stand,
                 ArmorModelSet.bake(ModelLayers.ARMOR_STAND_ARMOR, event.getEntityModels(), ArmorStandArmorModel::new),
-                ArmorModelSet.bake(ModelLayers.ARMOR_STAND_SMALL_ARMOR, event.getEntityModels(), ArmorStandArmorModel::new)));
+                ArmorModelSet.bake(ModelLayers.ARMOR_STAND_SMALL_ARMOR, event.getEntityModels(), ArmorStandArmorModel::new), 0.5F));
         }
         for (PlayerModelType type : event.getModelTypes()) {
             var player = event.<net.minecraft.client.renderer.entity.player.AvatarRenderer<net.minecraft.client.player.AbstractClientPlayer>>getPlayerRenderer(type);
             if (player != null) {
                 boolean slim = type == PlayerModelType.SLIM;
                 var set = ArmorModelSet.bake(slim ? ModelLayers.PLAYER_SLIM_ARMOR : ModelLayers.PLAYER_ARMOR, event.getEntityModels(), part -> new PlayerModel(part, slim));
-                player.addLayer(new ModelArmorLayer<>(player, set, set));
+                player.addLayer(new ModelArmorLayer<>(player, set, set, 1.0F));
             }
         }
     }

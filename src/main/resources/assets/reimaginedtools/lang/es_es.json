@@ -107,5 +107,9 @@
   "item.reimaginedtools.darkness_helmet": "Casco de oscuridad",
   "item.reimaginedtools.darkness_chestplate": "Peto de oscuridad",
   "item.reimaginedtools.darkness_leggings": "Pantalones de oscuridad",
-  "item.reimaginedtools.darkness_boots": "Botas de oscuridad"
+  "item.reimaginedtools.darkness_boots": "Botas de oscuridad",
+  "item.reimaginedtools.light_helmet": "Casco de luz",
+  "item.reimaginedtools.light_chestplate": "Peto de luz",
+  "item.reimaginedtools.light_leggings": "Pantalones de luz",
+  "item.reimaginedtools.light_boots": "Botas de luz"
 }

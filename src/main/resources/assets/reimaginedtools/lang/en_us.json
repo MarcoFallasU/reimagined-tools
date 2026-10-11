@@ -107,5 +107,9 @@
   "item.reimaginedtools.darkness_helmet": "Darkness Helmet",
   "item.reimaginedtools.darkness_chestplate": "Darkness Chestplate",
   "item.reimaginedtools.darkness_leggings": "Darkness Leggings",
-  "item.reimaginedtools.darkness_boots": "Darkness Boots"
+  "item.reimaginedtools.darkness_boots": "Darkness Boots",
+  "item.reimaginedtools.light_helmet": "Light Helmet",
+  "item.reimaginedtools.light_chestplate": "Light Chestplate",
+  "item.reimaginedtools.light_leggings": "Light Leggings",
+  "item.reimaginedtools.light_boots": "Light Boots"
 }

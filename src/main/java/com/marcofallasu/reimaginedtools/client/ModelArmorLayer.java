@@ -29,11 +29,18 @@ import net.minecraft.world.item.component.CustomModelData;
 public final class ModelArmorLayer<S extends HumanoidRenderState, M extends HumanoidModel<S>, A extends HumanoidModel<S>> extends RenderLayer<S, M> {
     private final ArmorModelSet<A> models;
     private final ArmorModelSet<A> babyModels;
+    private final float babyScale;
 
-    public ModelArmorLayer(RenderLayerParent<S, M> parent, ArmorModelSet<A> models, ArmorModelSet<A> babyModels) {
+    /**
+     * @param babyModels modelos de armadura para la versión pequeña (armor stand pequeño, bebés)
+     * @param babyScale  escala extra de las piezas en la versión pequeña. El armor stand pequeño reduce los huesos a la
+     *                   mitad dentro de su modelo (0.5); en jugadores y mobs el renderizador ya escala todo el cuerpo (1.0)
+     */
+    public ModelArmorLayer(RenderLayerParent<S, M> parent, ArmorModelSet<A> models, ArmorModelSet<A> babyModels, float babyScale) {
         super(parent);
         this.models = models;
         this.babyModels = babyModels;
+        this.babyScale = babyScale;
     }
 
     @Override
@@ -71,6 +78,9 @@ public final class ModelArmorLayer<S extends HumanoidRenderState, M extends Huma
             }
             pose.pushPose();
             part.translateAndRotate(pose);
+            if (state.isBaby) {
+                pose.scale(babyScale, babyScale, babyScale);
+            }
             // del espacio del modelo de entidad (y hacia abajo) al espacio de un modelo de ítem (y hacia arriba), igual que
             // hace la capa de cabeza de vanilla; 1 unidad del modelo del ítem = 1 píxel del cuerpo
             pose.mulPose(Axis.YP.rotationDegrees(180.0F));

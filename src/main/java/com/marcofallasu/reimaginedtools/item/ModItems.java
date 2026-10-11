@@ -58,11 +58,16 @@ public final class ModItems {
      * ModelArmorLayer (ver ModelArmorItem). Su asset de equipo (equipment/darkness.json) no tiene capas de humanoide,
      * así que la capa de armadura de vanilla no dibuja nada y solo la nuestra las coloca sobre el cuerpo.
      */
-    public static final RegistryObject<Item> DARKNESS_HELMET = registerModelArmor("darkness_helmet", ArmorType.HELMET);
+    public static final RegistryObject<Item> DARKNESS_HELMET = registerModelArmor("darkness_helmet", ModArmorMaterials.DARKNESS, ArmorType.HELMET);
     /** Peto, pantalones y botas de oscuridad: modelos 3D propios que dibuja ModelArmorLayer (ver ModelArmorItem). */
-    public static final RegistryObject<Item> DARKNESS_CHESTPLATE = registerModelArmor("darkness_chestplate", ArmorType.CHESTPLATE);
-    public static final RegistryObject<Item> DARKNESS_LEGGINGS = registerModelArmor("darkness_leggings", ArmorType.LEGGINGS);
-    public static final RegistryObject<Item> DARKNESS_BOOTS = registerModelArmor("darkness_boots", ArmorType.BOOTS);
+    public static final RegistryObject<Item> DARKNESS_CHESTPLATE = registerModelArmor("darkness_chestplate", ModArmorMaterials.DARKNESS, ArmorType.CHESTPLATE);
+    public static final RegistryObject<Item> DARKNESS_LEGGINGS = registerModelArmor("darkness_leggings", ModArmorMaterials.DARKNESS, ArmorType.LEGGINGS);
+    public static final RegistryObject<Item> DARKNESS_BOOTS = registerModelArmor("darkness_boots", ModArmorMaterials.DARKNESS, ArmorType.BOOTS);
+    /** Armadura de luz: stats de diamante y modelos 3D propios (capucha, túnica, pantalones y botas). */
+    public static final RegistryObject<Item> LIGHT_HELMET = registerModelArmor("light_helmet", ModArmorMaterials.LIGHT, ArmorType.HELMET);
+    public static final RegistryObject<Item> LIGHT_CHESTPLATE = registerModelArmor("light_chestplate", ModArmorMaterials.LIGHT, ArmorType.CHESTPLATE);
+    public static final RegistryObject<Item> LIGHT_LEGGINGS = registerModelArmor("light_leggings", ModArmorMaterials.LIGHT, ArmorType.LEGGINGS);
+    public static final RegistryObject<Item> LIGHT_BOOTS = registerModelArmor("light_boots", ModArmorMaterials.LIGHT, ArmorType.BOOTS);
     public static final Map<ToolKind, RegistryObject<Item>> LIGHT_TOOLS = registerToolSet("light", ModToolMaterials.LIGHT);
     public static final Map<ToolKind, RegistryObject<Item>> ELECTRICITY_TOOLS = registerToolSet("electricity", ModToolMaterials.ELECTRICITY);
     public static final Map<ToolKind, RegistryObject<Item>> MUSIC_TOOLS = registerToolSet("music", ModToolMaterials.MUSIC);
@@ -92,8 +97,9 @@ public final class ModItems {
         return set;
     }
 
-    private static RegistryObject<Item> registerModelArmor(String name, ArmorType type) {
-        return register(name, props -> new ModelArmorItem(props.humanoidArmor(ModArmorMaterials.DARKNESS, type).fireResistant()));
+    private static RegistryObject<Item> registerModelArmor(String name, ArmorMaterial material, ArmorType type) {
+        Function<Item.Properties, Item.Properties> extra = material == ModArmorMaterials.DARKNESS ? Item.Properties::fireResistant : Function.identity();
+        return register(name, props -> new ModelArmorItem(extra.apply(props.humanoidArmor(material, type))));
     }
 
     private static RegistryObject<Item> register(String name, Function<Item.Properties, Item> factory) {
